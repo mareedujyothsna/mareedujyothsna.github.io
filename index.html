@@ -4,347 +4,1408 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Jyothsna Mareedu | Java Developer & Data Analyst</title>
+    <title>Mareedu Jyothsna | Java Developer</title>
 
     <meta name="description"
-          content="Portfolio of Jyothsna Mareedu, a Computer Science graduate and aspiring Java Developer and Data Analyst.">
+          content="Mareedu Jyothsna - Java Developer, Software Engineer and Full Stack Developer">
+
+    <meta name="author" content="Mareedu Jyothsna">
 
     <style>
+
+        /* =========================
+           GLOBAL
+        ========================== */
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            scroll-behavior: smooth;
         }
 
         body {
-            font-family: Arial, sans-serif;
-            background: #ffffff;
-            color: #334155;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #FAFAF7;
+            color: #171717;
             line-height: 1.6;
         }
 
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1150px;
+            margin: auto;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================== */
+
         header {
-            background: #0F172A;
-            color: white;
-            padding: 20px 8%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(250, 250, 247, 0.96);
+            border-bottom: 1px solid #E5E5DF;
+            backdrop-filter: blur(10px);
         }
 
         nav {
+            height: 75px;
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            justify-content: space-between;
         }
 
         .logo {
-            font-size: 24px;
-            font-weight: bold;
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
         }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 25px;
+        .logo span {
+            color: #7C3AED;
         }
 
-        nav a:hover {
-            color: #06B6D4;
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            list-style: none;
         }
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 600;
+            color: #444;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #7C3AED;
+        }
+
+
+        /* =========================
+           HERO
+        ========================== */
 
         .hero {
-            min-height: 85vh;
+            min-height: 88vh;
             display: flex;
             align-items: center;
-            padding: 60px 8%;
-            background: #F8FAFC;
+            padding: 80px 0;
         }
 
         .hero-content {
-            max-width: 700px;
+            max-width: 850px;
+        }
+
+        .small-title {
+            color: #7C3AED;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 18px;
         }
 
         .hero h1 {
-            font-size: 52px;
-            color: #0F172A;
-            margin-bottom: 15px;
-        }
-
-        .hero h2 {
-            font-size: 28px;
-            color: #2563EB;
+            font-size: clamp(48px, 8vw, 82px);
+            line-height: 1.05;
+            letter-spacing: -3px;
             margin-bottom: 20px;
         }
 
+        .hero h2 {
+            font-size: clamp(22px, 3vw, 34px);
+            font-weight: 500;
+            color: #444;
+            margin-bottom: 25px;
+        }
+
         .hero p {
+            max-width: 700px;
             font-size: 18px;
-            margin-bottom: 30px;
+            color: #666;
+            margin-bottom: 35px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
         }
 
         .btn {
             display: inline-block;
-            padding: 12px 24px;
-            background: #2563EB;
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-            margin-right: 10px;
+            padding: 13px 23px;
+            border-radius: 7px;
+            font-size: 14px;
+            font-weight: 700;
+            transition: 0.3s;
         }
 
-        .btn:hover {
-            background: #06B6D4;
+        .btn-primary {
+            background: #C4B5FD;
+            color: #171717;
         }
+
+        .btn-primary:hover {
+            background: #8B5CF6;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            border: 1px solid #CFCFC7;
+            color: #222;
+            background: white;
+        }
+
+        .btn-secondary:hover {
+            border-color: #8B5CF6;
+            color: #7C3AED;
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           SECTIONS
+        ========================== */
 
         section {
-            padding: 70px 8%;
+            padding: 95px 0;
         }
 
-        section h2 {
-            text-align: center;
-            color: #0F172A;
-            font-size: 34px;
-            margin-bottom: 35px;
+        .section-title {
+            margin-bottom: 45px;
         }
 
-        .about {
-            max-width: 800px;
-            margin: auto;
-            text-align: center;
+        .section-number {
+            color: #7C3AED;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2px;
         }
 
-        .skills {
-            background: #F8FAFC;
+        .section-title h2 {
+            font-size: 42px;
+            margin-top: 8px;
+            letter-spacing: -1.5px;
         }
 
-        .skill-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
+        .section-title p {
+            color: #777;
+            margin-top: 8px;
         }
 
-        .skill {
-            background: white;
-            padding: 15px 25px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-        }
 
-        .projects {
+        /* =========================
+           ABOUT
+        ========================== */
+
+        .about-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: 1fr 1.5fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .about-intro {
+            font-size: 25px;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        .about-text {
+            color: #666;
+            font-size: 17px;
+        }
+
+        .about-text p {
+            margin-bottom: 18px;
+        }
+
+
+        /* =========================
+           SKILLS
+        ========================== */
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .skill-card {
+            background: white;
+            border: 1px solid #E5E5DF;
+            padding: 25px;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-4px);
+            border-color: #A78BFA;
+        }
+
+        .skill-card h3 {
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
+
+        .skill-card p {
+            color: #666;
+            font-size: 15px;
+        }
+
+
+        /* =========================
+           PROJECTS
+        ========================== */
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
             gap: 25px;
         }
 
         .project-card {
-            padding: 25px;
-            border-radius: 10px;
-            background: #F8FAFC;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            background: white;
+            border: 1px solid #E5E5DF;
+            border-radius: 12px;
+            padding: 30px;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+        }
+
+        .project-number {
+            color: #7C3AED;
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 12px;
         }
 
         .project-card h3 {
-            color: #0F172A;
-            margin-bottom: 10px;
+            font-size: 24px;
+            margin-bottom: 12px;
         }
+
+        .tech {
+            color: #7C3AED;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 18px;
+        }
+
+        .project-card p {
+            color: #666;
+            margin-bottom: 12px;
+        }
+
+        .project-card ul {
+            padding-left: 20px;
+            color: #666;
+        }
+
+        .project-card li {
+            margin-bottom: 8px;
+        }
+
+
+        /* =========================
+           EXPERIENCE
+        ========================== */
+
+        .experience-item {
+            display: grid;
+            grid-template-columns: 230px 1fr;
+            gap: 45px;
+            padding: 35px 0;
+            border-top: 1px solid #DEDED8;
+        }
+
+        .experience-item:last-child {
+            border-bottom: 1px solid #DEDED8;
+        }
+
+        .experience-date {
+            color: #7C3AED;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .experience-content h3 {
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+
+        .company {
+            color: #777;
+            margin-bottom: 15px;
+        }
+
+        .experience-content ul {
+            padding-left: 20px;
+            color: #666;
+        }
+
+        .experience-content li {
+            margin-bottom: 8px;
+        }
+
+
+        /* =========================
+           EDUCATION
+        ========================== */
+
+        .education-card {
+            background: white;
+            border: 1px solid #E5E5DF;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 18px;
+            transition: 0.3s;
+        }
+
+        .education-card:hover {
+            border-color: #A78BFA;
+            transform: translateY(-3px);
+        }
+
+        .education-card h3 {
+            font-size: 21px;
+            margin-bottom: 6px;
+        }
+
+        .education-card .institution {
+            color: #666;
+        }
+
+        .education-card .details {
+            margin-top: 10px;
+            color: #7C3AED;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           CERTIFICATIONS
+        ========================== */
+
+        .cert-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .cert-card {
+            padding: 24px;
+            background: white;
+            border: 1px solid #E5E5DF;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .cert-card:hover {
+            border-color: #A78BFA;
+            transform: translateY(-3px);
+        }
+
+        .cert-card h3 {
+            font-size: 17px;
+            margin-bottom: 8px;
+        }
+
+        .cert-card p {
+            color: #7C3AED;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================== */
+
+        .contact-section {
+            background: #171717;
+            color: white;
+        }
+
+        .contact-section .section-number {
+            color: #C4B5FD;
+        }
+
+        .contact-section .section-title p {
+            color: #AAA;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+        }
+
+        .contact-content h3 {
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .contact-content > div > p {
+            color: #AAA;
+            max-width: 500px;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .contact-link {
+            border-bottom: 1px solid #444;
+            padding: 14px 0;
+            color: #DDD;
+            transition: 0.3s;
+        }
+
+        .contact-link:hover {
+            color: #C4B5FD;
+            padding-left: 6px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================== */
 
         footer {
-            background: #0F172A;
-            color: white;
-            text-align: center;
-            padding: 30px;
+            background: #171717;
+            border-top: 1px solid #333;
+            color: #888;
+            padding: 25px 0;
+            font-size: 13px;
         }
 
-        @media (max-width: 768px) {
+        footer .container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
 
-            nav {
-                flex-direction: column;
+
+        /* =========================
+           MOBILE
+        ========================== */
+
+        @media (max-width: 800px) {
+
+            .nav-links {
+                display: none;
             }
 
-            nav a {
-                margin: 8px;
+            .hero {
+                min-height: 80vh;
             }
 
             .hero h1 {
-                font-size: 38px;
+                letter-spacing: -2px;
             }
 
-            .projects {
+            .about-grid,
+            .projects-grid,
+            .skills-grid,
+            .cert-list,
+            .contact-content {
                 grid-template-columns: 1fr;
             }
+
+            .experience-item {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            section {
+                padding: 70px 0;
+            }
+
+            .section-title h2 {
+                font-size: 34px;
+            }
+
+            .about-intro {
+                font-size: 22px;
+            }
+
         }
+
     </style>
 </head>
 
+
 <body>
 
-<header>
-    <nav>
-        <div class="logo">Jyothsna Mareedu</div>
 
-        <div>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#experience">Experience</a>
-            <a href="#contact">Contact</a>
-        </div>
-    </nav>
-</header>
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
 
-<section class="hero">
+    <header>
 
-    <div class="hero-content">
+        <div class="container">
 
-        <h1>Hi, I'm Jyothsna</h1>
+            <nav>
 
-        <h2>Java Developer | Data Analyst</h2>
+                <a href="#home" class="logo">
+                    Mareedu <span>Jyothsna</span>
+                </a>
 
-        <p>
-            Computer Science graduate passionate about software development,
-            databases, and data-driven problem solving.
-        </p>
+                <ul class="nav-links">
 
-        <a href="#projects" class="btn">View Projects</a>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#certifications">Certifications</a></li>
+                    <li><a href="#contact">Contact</a></li>
 
-        <a href="#contact" class="btn">Contact Me</a>
+                </ul>
 
-    </div>
-
-</section>
-
-<section id="about">
-
-    <h2>About Me</h2>
-
-    <div class="about">
-
-        <p>
-            I'm a Computer Science graduate with a strong foundation in
-            Java, SQL, JDBC, Oracle and software development fundamentals.
-            I enjoy building practical applications and using technology
-            to solve real-world problems.
-        </p>
-
-    </div>
-
-</section>
-
-<section id="skills" class="skills">
-
-    <h2>Skills</h2>
-
-    <div class="skill-container">
-
-        <div class="skill">Java</div>
-        <div class="skill">Python</div>
-        <div class="skill">SQL</div>
-        <div class="skill">JDBC</div>
-        <div class="skill">Oracle</div>
-        <div class="skill">REST APIs</div>
-        <div class="skill">Pandas</div>
-        <div class="skill">NumPy</div>
-        <div class="skill">Scikit-learn</div>
-        <div class="skill">Git</div>
-        <div class="skill">GitHub</div>
-
-    </div>
-
-</section>
-
-<section id="projects">
-
-    <h2>Projects</h2>
-
-    <div class="projects">
-
-        <div class="project-card">
-
-            <h3>Registration & Profile Management System</h3>
-
-            <p>
-                Java-based application developed using JDBC and Oracle
-                for registration, login, profile viewing and profile
-                updates.
-            </p>
+            </nav>
 
         </div>
 
-        <div class="project-card">
+    </header>
 
-            <h3>Telecom Churn Prediction</h3>
 
-            <p>
-                Machine learning project focused on predicting telecom
-                customer churn using feature selection, SMOTE and
-                machine learning models.
-            </p>
+
+    <!-- =========================
+         HOME
+    ========================== -->
+
+    <main id="home">
+
+        <section class="hero">
+
+            <div class="container">
+
+                <div class="hero-content">
+
+                    <div class="small-title">
+                        Java Developer
+                    </div>
+
+                    <h1>
+                        Hi, I'm<br>
+                        Mareedu Jyothsna
+                    </h1>
+
+                    <h2>
+                        Java Developer | Software Engineer | Full Stack Developer
+                    </h2>
+
+                    <p>
+                        Computer Science graduate with hands-on experience in
+                        Java, SQL, JDBC, Oracle Database and backend development.
+                        I enjoy building practical applications and solving
+                        programming problems through clean and structured code.
+                    </p>
+
+                    <div class="buttons">
+
+                        <a href="#projects" class="btn btn-primary">
+                            View My Projects
+                        </a>
+
+                        <a href="mailto:jyothsnamareedu811@gmail.com"
+                           class="btn btn-secondary">
+                            Contact Me
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             ABOUT
+        ========================== -->
+
+        <section id="about">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <div class="section-number">
+                        01 — ABOUT
+                    </div>
+
+                    <h2>About Me</h2>
+
+                    <p>
+                        A little about my background and interests.
+                    </p>
+
+                </div>
+
+
+                <div class="about-grid">
+
+                    <div>
+
+                        <div class="about-intro">
+
+                            Computer Science graduate focused on
+                            Java development and software engineering.
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="about-text">
+
+                        <p>
+                            I am a Computer Science graduate with hands-on
+                            experience in Java, SQL, JDBC and backend
+                            development.
+                        </p>
+
+                        <p>
+                            I have worked on applications involving
+                            Java, Oracle Database, JDBC, Django, REST APIs,
+                            HTML and CSS through internships and personal
+                            projects.
+                        </p>
+
+                        <p>
+                            My current focus is building a strong foundation
+                            in Java development, backend programming,
+                            databases and software engineering.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             SKILLS
+        ========================== -->
+
+        <section id="skills">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <div class="section-number">
+                        02 — SKILLS
+                    </div>
+
+                    <h2>Technical Skills</h2>
+
+                    <p>
+                        Technologies and concepts I have worked with.
+                    </p>
+
+                </div>
+
+
+                <div class="skills-grid">
+
+                    <div class="skill-card">
+
+                        <h3>Programming Languages</h3>
+
+                        <p>
+                            Java, Python, C++, C, JavaScript
+                        </p>
+
+                    </div>
+
+
+                    <div class="skill-card">
+
+                        <h3>Core Java</h3>
+
+                        <p>
+                            OOP, Collections, Exception Handling, JDBC
+                        </p>
+
+                    </div>
+
+
+                    <div class="skill-card">
+
+                        <h3>Computer Science</h3>
+
+                        <p>
+                            Data Structures & Algorithms,
+                            Object-Oriented Programming
+                        </p>
+
+                    </div>
+
+
+                    <div class="skill-card">
+
+                        <h3>Databases</h3>
+
+                        <p>
+                            SQL, Oracle, PL/SQL
+                        </p>
+
+                    </div>
+
+
+                    <div class="skill-card">
+
+                        <h3>Web & APIs</h3>
+
+                        <p>
+                            HTML, CSS, REST APIs
+                        </p>
+
+                    </div>
+
+
+                    <div class="skill-card">
+
+                        <h3>Tools</h3>
+
+                        <p>
+                            Git, GitHub, VS Code
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             PROJECTS
+        ========================== -->
+
+        <section id="projects">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <div class="section-number">
+                        03 — PROJECTS
+                    </div>
+
+                    <h2>Featured Projects</h2>
+
+                    <p>
+                        Some of the applications I have built.
+                    </p>
+
+                </div>
+
+
+                <div class="projects-grid">
+
+
+                    <!-- JAVA PROJECT -->
+
+                    <div class="project-card">
+
+                        <div class="project-number">
+                            PROJECT 01
+                        </div>
+
+                        <h3>
+                            Registration & Profile Management System
+                        </h3>
+
+                        <div class="tech">
+                            Java · JDBC · Oracle · SQL · PL/SQL
+                        </div>
+
+                        <p>
+                            A console-based Registration & Profile
+                            Management System developed using Core Java,
+                            JDBC and Oracle Database.
+                        </p>
+
+                        <ul>
+
+                            <li>
+                                Implemented employee registration and
+                                login authentication.
+                            </li>
+
+                            <li>
+                                Used CallableStatement and PL/SQL
+                                stored procedures.
+                            </li>
+
+                            <li>
+                                Implemented View Profile and
+                                Update Profile functionality.
+                            </li>
+
+                            <li>
+                                Applied exception handling and
+                                menu-driven control flow.
+                            </li>
+
+                        </ul>
+
+                        <br>
+
+                        <a href="https://github.com/mareedujyothsna/Employee-Registration-Profile-Management"
+                           target="_blank"
+                           class="btn btn-secondary">
+
+                            View on GitHub →
+
+                        </a>
+
+                    </div>
+
+
+
+                    <!-- ML PROJECT -->
+
+                    <div class="project-card">
+
+                        <div class="project-number">
+                            PROJECT 02
+                        </div>
+
+                        <h3>
+                            Telecom Customer Churn Prediction
+                        </h3>
+
+                        <div class="tech">
+                            Python · XGBoost · CatBoost · LightGBM · SHAP
+                        </div>
+
+                        <p>
+                            A machine learning project focused on
+                            predicting telecom customer churn using
+                            ensemble learning and feature selection.
+                        </p>
+
+                        <ul>
+
+                            <li>
+                                Applied Ant Colony Optimization (ACO)
+                                for feature selection.
+                            </li>
+
+                            <li>
+                                Used SHAP for explainable AI and
+                                feature interpretation.
+                            </li>
+
+                            <li>
+                                Implemented XGBoost, CatBoost and
+                                LightGBM models.
+                            </li>
+
+                            <li>
+                                Achieved 91% prediction accuracy.
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             INTERNSHIP EXPERIENCE
+        ========================== -->
+
+        <section id="experience">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <div class="section-number">
+                        04 — EXPERIENCE
+                    </div>
+
+                    <h2>Internship Experience</h2>
+
+                    <p>
+                        Practical experience gained through internships.
+                    </p>
+
+                </div>
+
+
+
+                <!-- INTERNSHIP 1 -->
+
+                <div class="experience-item">
+
+                    <div class="experience-date">
+                        Jan 2025 – Apr 2025
+                    </div>
+
+                    <div class="experience-content">
+
+                        <h3>
+                            Web Development Intern
+                        </h3>
+
+                        <div class="company">
+                            ExcelR — Bangalore
+                        </div>
+
+                        <ul>
+
+                            <li>
+                                Developed a weather forecasting web
+                                application using Django and the
+                                OpenWeatherMap API.
+                            </li>
+
+                            <li>
+                                Implemented city-based search functionality
+                                and dynamic UI updates.
+                            </li>
+
+                            <li>
+                                Integrated REST APIs with backend logic
+                                to retrieve and process weather information.
+                            </li>
+
+                            <li>
+                                Designed backend workflows for API requests
+                                and weather data processing.
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- INTERNSHIP 2 -->
+
+                <div class="experience-item">
+
+                    <div class="experience-date">
+                        May 2024 – Jul 2024
+                    </div>
+
+                    <div class="experience-content">
+
+                        <h3>
+                            Python Full Stack Intern
+                        </h3>
+
+                        <div class="company">
+                            International Institute of Digital Technologies
+                            — Tirupati
+                        </div>
+
+                        <ul>
+
+                            <li>
+                                Developed a YouTube Video Downloader
+                                application using Django and Pytube.
+                            </li>
+
+                            <li>
+                                Implemented support for multiple download
+                                formats including MP4 and MP3.
+                            </li>
+
+                            <li>
+                                Designed backend workflows for video
+                                retrieval, format selection and file processing.
+                            </li>
+
+                            <li>
+                                Improved application reliability through
+                                structured error handling.
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- INTERNSHIP 3 -->
+
+                <div class="experience-item">
+
+                    <div class="experience-date">
+                        Jun 2023 – Sep 2023
+                    </div>
+
+                    <div class="experience-content">
+
+                        <h3>
+                            Python Full Stack Intern
+                        </h3>
+
+                        <div class="company">
+                            Lineysha & Thevan Software Technologies
+                            — Vijayawada
+                        </div>
+
+                        <ul>
+
+                            <li>
+                                Developed an object tracking system
+                                using OpenCV for real-time video analysis.
+                            </li>
+
+                            <li>
+                                Implemented computer vision algorithms
+                                to detect and track moving objects.
+                            </li>
+
+                            <li>
+                                Applied image-processing techniques
+                                for real-time object detection and tracking.
+                            </li>
+
+                            <li>
+                                Gained practical experience in image
+                                processing, video analytics and
+                                computer vision applications.
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             EDUCATION
+        ========================== -->
+
+        <section id="education">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <div class="section-number">
+                        05 — EDUCATION
+                    </div>
+
+                    <h2>Education</h2>
+
+                </div>
+
+
+                <div class="education-card">
+
+                    <h3>
+                        B.Tech in Computer Science and Engineering
+                    </h3>
+
+                    <div class="institution">
+                        Lingaya’s Institute of Management and Technology,
+                        Vijayawada
+                    </div>
+
+                    <div class="details">
+                        CGPA: 7.04 · 2021 – 2025
+                    </div>
+
+                </div>
+
+
+                <div class="education-card">
+
+                    <h3>
+                        Intermediate (MPC)
+                    </h3>
+
+                    <div class="institution">
+                        Chaitanya Junior College, Gannavaram
+                    </div>
+
+                    <div class="details">
+                        Percentage: 69.9% · 2019 – 2021
+                    </div>
+
+                </div>
+
+
+                <div class="education-card">
+
+                    <h3>
+                        SSC
+                    </h3>
+
+                    <div class="institution">
+                        Sri Sai Srinivasa High School, Pedavutapalli
+                    </div>
+
+                    <div class="details">
+                        GPA: 9.8 · 2018 – 2019
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             CERTIFICATIONS
+        ========================== -->
+
+        <section id="certifications">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <div class="section-number">
+                        06 — CERTIFICATIONS
+                    </div>
+
+                    <h2>Certifications</h2>
+
+                    <p>
+                        Certifications and professional learning.
+                    </p>
+
+                </div>
+
+
+                <div class="cert-list">
+
+                    <div class="cert-card">
+
+                        <h3>
+                            NPTEL Elite Certification –
+                            Programming in Java
+                        </h3>
+
+                        <p>
+                            October 2024
+                        </p>
+
+                    </div>
+
+
+                    <div class="cert-card">
+
+                        <h3>
+                            IBM Data Science and Machine Learning
+                            Professional Certification
+                        </h3>
+
+                        <p>
+                            edX · June 2024
+                        </p>
+
+                    </div>
+
+
+                    <div class="cert-card">
+
+                        <h3>
+                            Salesforce Developer Virtual Internship
+                            Certification
+                        </h3>
+
+                        <p>
+                            February 2024
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             CONTACT
+        ========================== -->
+
+        <section id="contact" class="contact-section">
+
+            <div class="container">
+
+                <div class="section-title">
+
+                    <div class="section-number">
+                        07 — CONTACT
+                    </div>
+
+                    <h2>Let's Connect</h2>
+
+                    <p>
+                        Open to entry-level Java Developer and
+                        Software Engineer opportunities.
+                    </p>
+
+                </div>
+
+
+                <div class="contact-content">
+
+                    <div>
+
+                        <h3>
+                            Have an opportunity?
+                        </h3>
+
+                        <p>
+                            I am looking for opportunities where I can
+                            contribute, learn and grow as a software
+                            developer.
+                        </p>
+
+                        <br>
+
+                        <!--
+                            RESUME BUTTON
+
+                            Later upload your resume into this repository
+                            with this exact name:
+
+                            Mareedu_Jyothsna_Resume.pdf
+                        -->
+
+                        <a href="Mareedu_Jyothsna_Resume.pdf"
+                           class="btn btn-primary"
+                           target="_blank">
+
+                            Download Resume
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="contact-links">
+
+                        <a href="mailto:jyothsnamareedu811@gmail.com"
+                           class="contact-link">
+
+                            Email
+                            <br>
+                            jyothsnamareedu811@gmail.com
+
+                        </a>
+
+
+                        <a href="https://linkedin.com/in/mareedu-jyothsna"
+                           target="_blank"
+                           class="contact-link">
+
+                            LinkedIn
+                            <br>
+                            linkedin.com/in/mareedu-jyothsna
+
+                        </a>
+
+
+                        <a href="https://github.com/mareedujyothsna"
+                           target="_blank"
+                           class="contact-link">
+
+                            GitHub
+                            <br>
+                            github.com/mareedujyothsna
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="container">
+
+            <div>
+                © 2026 Mareedu Jyothsna
+            </div>
+
+            <div>
+                Java Developer · Software Engineer
+            </div>
 
         </div>
 
-        <div class="project-card">
+    </footer>
 
-            <h3>Object Tracking System</h3>
-
-            <p>
-                Computer vision project using Python, OpenCV and NumPy
-                for real-time object tracking through webcam frames.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-<section id="experience">
-
-    <h2>Experience</h2>
-
-    <div class="about">
-
-        <h3>Web Development Intern — ExcelR</h3>
-        <p>Jan 2025 – Apr 2025</p>
-
-        <br>
-
-        <h3>Python Developer Intern — International Institute of Digital Technologies</h3>
-        <p>May 2024 – Jul 2024</p>
-
-    </div>
-
-</section>
-
-<section id="contact">
-
-    <h2>Let's Connect</h2>
-
-    <div class="about">
-
-        <p>
-            I'm open to opportunities in Java development,
-            software engineering and data analytics.
-        </p>
-
-        <br>
-
-        <a href="https://linkedin.com/in/mareedu-jyothsna"
-           class="btn">
-            LinkedIn
-        </a>
-
-        <a href="https://github.com/mareedujyothsna"
-           class="btn">
-            GitHub
-        </a>
-
-    </div>
-
-</section>
-
-<footer>
-
-    <p>© 2026 Jyothsna Mareedu. All rights reserved.</p>
-
-</footer>
 
 </body>
 </html>
