@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jyothsna Mareedu | Java Developer & Data Analyst</title>
+
+    <meta name="description"
+          content="Portfolio of Jyothsna Mareedu, a Computer Science graduate and aspiring Java Developer and Data Analyst.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #ffffff;
+            color: #334155;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #0F172A;
+            color: white;
+            padding: 20px 8%;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+        }
+
+        nav a:hover {
+            color: #06B6D4;
+        }
+
+        .hero {
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            padding: 60px 8%;
+            background: #F8FAFC;
+        }
+
+        .hero-content {
+            max-width: 700px;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            color: #0F172A;
+            margin-bottom: 15px;
+        }
+
+        .hero h2 {
+            font-size: 28px;
+            color: #2563EB;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #2563EB;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            margin-right: 10px;
+        }
+
+        .btn:hover {
+            background: #06B6D4;
+        }
+
+        section {
+            padding: 70px 8%;
+        }
+
+        section h2 {
+            text-align: center;
+            color: #0F172A;
+            font-size: 34px;
+            margin-bottom: 35px;
+        }
+
+        .about {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .skills {
+            background: #F8FAFC;
+        }
+
+        .skill-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .skill {
+            background: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .project-card {
+            padding: 25px;
+            border-radius: 10px;
+            background: #F8FAFC;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        .project-card h3 {
+            color: #0F172A;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background: #0F172A;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        @media (max-width: 768px) {
+
+            nav {
+                flex-direction: column;
+            }
+
+            nav a {
+                margin: 8px;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .projects {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <div class="logo">Jyothsna Mareedu</div>
+
+        <div>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+</header>
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>Hi, I'm Jyothsna</h1>
+
+        <h2>Java Developer | Data Analyst</h2>
+
+        <p>
+            Computer Science graduate passionate about software development,
+            databases, and data-driven problem solving.
+        </p>
+
+        <a href="#projects" class="btn">View Projects</a>
+
+        <a href="#contact" class="btn">Contact Me</a>
+
+    </div>
+
+</section>
+
+<section id="about">
+
+    <h2>About Me</h2>
+
+    <div class="about">
+
+        <p>
+            I'm a Computer Science graduate with a strong foundation in
+            Java, SQL, JDBC, Oracle and software development fundamentals.
+            I enjoy building practical applications and using technology
+            to solve real-world problems.
+        </p>
+
+    </div>
+
+</section>
+
+<section id="skills" class="skills">
+
+    <h2>Skills</h2>
+
+    <div class="skill-container">
+
+        <div class="skill">Java</div>
+        <div class="skill">Python</div>
+        <div class="skill">SQL</div>
+        <div class="skill">JDBC</div>
+        <div class="skill">Oracle</div>
+        <div class="skill">REST APIs</div>
+        <div class="skill">Pandas</div>
+        <div class="skill">NumPy</div>
+        <div class="skill">Scikit-learn</div>
+        <div class="skill">Git</div>
+        <div class="skill">GitHub</div>
+
+    </div>
+
+</section>
+
+<section id="projects">
+
+    <h2>Projects</h2>
+
+    <div class="projects">
+
+        <div class="project-card">
+
+            <h3>Registration & Profile Management System</h3>
+
+            <p>
+                Java-based application developed using JDBC and Oracle
+                for registration, login, profile viewing and profile
+                updates.
+            </p>
+
+        </div>
+
+        <div class="project-card">
+
+            <h3>Telecom Churn Prediction</h3>
+
+            <p>
+                Machine learning project focused on predicting telecom
+                customer churn using feature selection, SMOTE and
+                machine learning models.
+            </p>
+
+        </div>
+
+        <div class="project-card">
+
+            <h3>Object Tracking System</h3>
+
+            <p>
+                Computer vision project using Python, OpenCV and NumPy
+                for real-time object tracking through webcam frames.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="experience">
+
+    <h2>Experience</h2>
+
+    <div class="about">
+
+        <h3>Web Development Intern — ExcelR</h3>
+        <p>Jan 2025 – Apr 2025</p>
+
+        <br>
+
+        <h3>Python Developer Intern — International Institute of Digital Technologies</h3>
+        <p>May 2024 – Jul 2024</p>
+
+    </div>
+
+</section>
+
+<section id="contact">
+
+    <h2>Let's Connect</h2>
+
+    <div class="about">
+
+        <p>
+            I'm open to opportunities in Java development,
+            software engineering and data analytics.
+        </p>
+
+        <br>
+
+        <a href="https://linkedin.com/in/mareedu-jyothsna"
+           class="btn">
+            LinkedIn
+        </a>
+
+        <a href="https://github.com/mareedujyothsna"
+           class="btn">
+            GitHub
+        </a>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <p>© 2026 Jyothsna Mareedu. All rights reserved.</p>
+
+</footer>
+
+</body>
+</html>
